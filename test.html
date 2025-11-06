@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>聯合知識庫 - 全球最大的中文新聞資料庫平台</title>
+	<link rel="stylesheet" href="https://udndata.com/images/newdata/css_2017/css/fontello.css">
+	<link rel="stylesheet" href="https://udndata.com/images/newdata/css_2017/font-awesome.min.css">
+	<!-- // masterslidercss 套件 -->
+	<link rel="stylesheet" href="https://udndata.com/images/newdata/css_2017/masterslider.css">
+	<link rel="stylesheet" href="https://udndata.com/images/newdata/css_2017/style.css">
+	<!-- Google Tag Manager -->
+	<script>
+		if (window.location.href.indexOf("jsessionid") == -1) {
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K2BMZZT');
+  }
+	</script>
+	<!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+	<div id="container">
+
+		<!-- // 燈箱遮罩 -->
+		<div class="overlay close"></div>
+
+		<!-- // 手機左右側滑選單收合遮罩 -->
+		<div class="mob-menu-overlay close"></div>
+
+		<!-- // header+menu -->
+		<!--#include virtual="inc/header.html" -->
+
+		<!-- Begin Data Layer -->
+		<script>
+			function getCookie(name) {
+		var value = "; " + document.cookie;
+		var parts = value.split("; " + name + "=");
+		if (parts.length >= 2) return parts.pop().split(";").shift();
+	}
+
+	var _ga = getCookie('_ga');
+	var _gaA = _ga.split(".");
+	var google_id = '';
+	for (i=2;i<_gaA.length;i++) google_id = google_id+_gaA[i]+'.';
+	google_id = google_id.substring(0,google_id.length-1);
+	
+ 
+  const DATA_AUTH_TYPE_LIST = {
+    '0': '已登入_企業母會員',
+    '1': '已登入_企業子會員',
+    '2': '定址會員',
+    '3': '已登入_會員',
+    '4': '已登入_友站會員',
+    '9': '未登入',
+  };
+	var user_id = undefined;
+  var data_user_id = 130887;
+  var data_status = 2;
+	var cat2 = '';
+	var auth_type = '未登入';
+	if (typeof data_status !== 'undefined' ) {
+		var auth_type = DATA_AUTH_TYPE_LIST[data_status];
+	} else {
+    user_id = undefined;
+  }
+
+  dataLayer = [{
+      'user_id': user_id,
+      'product_user_id': data_user_id,
+      'google_id': google_id,
+      'cat': ['udndata', cat2, '', '', ''],
+      'content_tag': '',
+      'auth_type': auth_type,
+      'publication_date': '',
+      'ffid': JSON.parse(localStorage.getItem('UDN_FID'))?.FFID,
+      'dfid': JSON.parse(localStorage.getItem('UDN_FID'))?.DFID
+  }];
+		</script>
+		<script src="https://p.udn.com.tw/upf/static/common/universal-fingerprint.umd.js" charset="UTF-8"></script>
+		<!-- End Data Layer -->
+
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2BMZZT" height="0" width="0"
+				style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+
+		<header>
+			<!-- // toprow menu -->
+			<div class="toprow_bar mob-none">
+				<div class="wrapper clearfix">
+					<ul class="toprow">
+						<li><a href="https://udndata.com/udn">全文報紙</a></li>
+						<li><a href="https://udndata.com/fullpage/">原版報紙</a></li>
+						<li><a href="https://udndata.com/image/">新聞圖庫</a></li>
+						<li><a href="https://udndata.com/bsw/">商業周刊</a></li>
+						<li><a href="https://udndata.com/gvm/">遠見</a></li>
+						<li><a href="https://udndata.com/brain/">動腦</a></li>
+						<li><a href="https://udndata.com/video/">影音</a></li>
+						<li><a href="https://udndata.com/faq/authority.html">授權</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="wrapper top clearfix">
+
+				<!-- // mobile left+right icon -->
+				<span class="button menu-button-left">
+      <i class="fa fa-reorder" aria-hidden="true"></i>
+    </span>
+
+				<span class="button menu-button-right">
+      <i class="fa fa-user" aria-hidden="true"></i>
+    </span>
+
+				<!-- // logo -->
+				<div class="logo-group">
+
+					<div class="logo">
+						<div class="link clearfix">
+							<a href="https://udndata.com/" class="data-index"></a>
+							<a href="https://udndata.com/udn/" class="index"></a>
+						</div>
+						<img src="/images/newdata/images_2017/logo.svg" alt="全文報紙資料庫" title="全文報紙資料庫">
+      </div>
+
+
+						<div class="logo-ip">
+							<img src="/images/newdata/images_2017/logo-ip.svg" alt="定址會員" title="定址會員">
+      </div>
+
+						</div>
+
+						<ul class="menu clearfix">
+
+
+							<li>
+								<a href="https://udndata.com/ndapp/Logout?toUrl=/udn" class="fa-user-times">登出</a>
+							</li>
+
+
+
+
+
+
+							<li class="question-circle">
+								<a href="https://udndata.com/faq/fulltext.html" target="_blank" class="fa-question-circle">常見問題</a>
+							</li>
+							<li class="web-none">
+								<a href="https://udndata.com" class="fa-info-circle popup-btn pop-text"
+									data-popup="聯合知識庫提供之線上資料庫查詢服務，僅供個人閱讀、瀏覽，禁止重製轉載、禁止以程式或機器讀取擷取或下載資料。若有研究分析及其他利用需求，請與我們聯繫授權事宜。">著作權聲明</a>
+							</li>
+
+						</ul>
+
+					</div>
+
+		</header>
+
+		<div class="print-header-control clearfix">
+			<div class="logo-data">
+				<img src="/images/newdata/images_2017/logo.svg" alt="聯合知識庫" title="聯合知識庫">
+  </div>
+				<button class="friendlyPrint">
+    <i class="fa fa-print" aria-hidden="true"></i>友善列印</button>
+			</div>
+
+
+
+			<main>
+				<div class="wrapper clearfix">
+
+					<!-- // mainbar -->
+					<div id="mainbar" class="clearfix">
+						<!-- // breadcrumb -->
+						<div class="breadcrumb"><a href="https://udndata.com/ndapp/Index">首頁</a><a href="https://udndata.com/ndapp/Index?cp=udn">全文報紙資料庫</a><a
+								href="https://udndata.com/ndapp/Searchdec?SearchString=%A9%CA%AB%49%2B%A4%E9%B4%C1%26gt%3B%3D20251008%2B%A4%E9%B4%C1%26lt%3B%3D20251106%2B%B3%F8%A7%4F%3D%C1%70%A6%58%B3%F8&select=0&sharepage=20&kind=2&page=1&udndbid=udndata">標題頁</a><a>內文頁</a>
+						</div>
+
+						<section class="story">
+							<div class="story-btn-group">
+
+
+
+								<button class="send" onclick="javascript:window.open('/ndapp/FwdArticle?id=10611531&udndbid=udndata&searchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D')"><i class="fa fa-envelope-o" aria-hidden="true"></i><span class="text">轉寄</span></button>
+								<button data-html="#print" class="mob-none contacts popup-btn pop-html-big-H">  <i class="fa fa-print" aria-hidden="true"></i>列印</button>
+							</div>
+
+							<div class="story-content" id="print">
+								<div class="story-title">
+
+
+									<h1>涉淫魔性醜聞 安德魯被拔王子頭銜</h1>
+
+									<h4>英王對胞弟祭最嚴厲處分 要求搬出王室莊園 但私下仍將金援</h4>
+
+								</div>
+
+								<span class="story-report">【記者顏伶如、編譯茅毅╱連線報導】</span>
+
+								<article>
+
+									<div class="ms-staff-carousel ms-filters-template pic">
+
+										<div class="master-slider ms-skin-default" id="masterslider">
+
+											<div class="ms-slide" data-fill-mode="fit" data-delay="1">
+												<img src="/images/newdata/images_2017/masterslider/blank.gif" data-src="/ndapp/ShowPhoto?1287D754265A24BF71DB23FC0EE183AD-n2graph_server=aHR0cDovLzE5Mi4xNjguNy4xNzQ=&pic_path=LzIwMjUvMTEvMDEvMS8=&pic_name=Mzc4NzM3XzIwMjUxMDMxMDQ1ODMyNDIwLmpwZw==" alt="一連串的醜聞使英王查理三世（右）忍無可忍，十月卅日宣布剝奪胞弟安德魯（左）的王子頭銜。（美聯社）" title="一連串的醜聞使英王查理三世（右）忍無可忍，十月卅日宣布剝奪胞弟安德魯（左）的王子頭銜。（美聯社）" />
+												<a href="https://udndata.com"
+													data-src="/ndapp/ShowPhoto?1287D754265A24BF71DB23FC0EE183AD-n2graph_server=aHR0cDovLzE5Mi4xNjguNy4xNzQ=&pic_path=LzIwMjUvMTEvMDEvMS8=&pic_name=Mzc4NzM3XzIwMjUxMDMxMDQ1ODMyNDIwLmpwZw=="
+													class="popup-btn pop-img"></a>
+
+												<div class="ms-layer description" data-duration="100">
+													一連串的醜聞使英王查理三世（右）忍無可忍，十月卅日宣布剝奪胞弟安德魯（左）的王子頭銜。（美聯社）
+													<!--美國聯合通訊社 -->
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+
+
+									<div class="print-pic">
+										<div class="print-pic-img">
+											<img src="/ndapp/ShowSmallPhoto?graph_server=aHR0cDovLzE5Mi4xNjguNy4xNzQ=&pic_path=LzIwMjUvMTEvMDEvMS8=&pic_name=Mzc4NzM3XzIwMjUxMDMxMDQ1ODMyNDIwLmpwZw==" />
+                  </div>
+											<div class="print-pic-description">
+												一連串的醜聞使英王查理三世（右）忍無可忍，十月卅日宣布剝奪胞弟安德魯（左）的王子頭銜。（美聯社）
+
+											</div>
+										</div>
+
+										<p>英國安德魯王子與已故美國富豪艾普斯坦間的密切關係曝光後，被英國王室祭出最嚴厲懲罰。白金漢宮十月卅日聲明，當天已正式啟動剝奪安德魯的王子稱謂、頭銜及榮譽的正式程序。七十六歲的英國國王查理三世也要求六十五歲胞弟安德魯搬出王室莊園住所。
+											<p>
+												<p>根據白金漢宮聲明，被剝奪王子頭銜後，安德魯的名字將是安德魯．蒙巴頓．溫莎。該聲明還寫道，「他雖持續否認相關指控，但這些處分仍被視為有其必要；國王與王后陛下想藉此表明，他們始終關心並深切同情遭到所有虐待形式的受害者及倖存者」。
+													<p>
+														<p>安德魯十月十七日才聲明，與查理三世討論後，決定放棄「約克公爵」頭銜，但仍保留王子身分。安德魯說，今後將不再使用公爵頭銜或公爵禮遇，且「對一切指控，本人均嚴正否認」。當時王室也指稱，安德魯是已故英國女王伊麗莎白二世次子，故保留其王子身分。
+															<p>
+																<p>王室原以為安德魯放棄公爵頭銜，就能平息「淫魔」艾普斯坦相關醜聞，孰料反引起外界擴大檢視安德魯享有的王室待遇。他所住的王室莊園共達卅個房間，座落在溫莎大公園，安德魯前妻莎拉．佛格森竟也同住。
+																	<p>
+																		<p>安德魯搬出王室莊園後，將入住查理三世私人擁有的諾福克郡桑德令罕住所，並由胞兄查理三世私下提供經濟奧援。安德魯並未對王室的前述決定公開表達異議，他的兩個女兒仍能保留公主頭銜。
+																			<p>
+																				<p>遭艾普斯坦逼迫賣淫的受害者裘弗利對安德魯提告，指控在十七歲未成年時遭他強暴。兩人之後以外界不詳的賠償金額庭外和解，據傳達數百萬美元，但他仍未承認有犯下任何過錯。
+																					<p>
+																						<p>擁有美國和澳洲雙重國籍的裘弗利四月在澳洲自戕身亡，得年四十一歲。她在回憶錄中描述遭
+																							<font color="RED">性</font>
+																							<font color="RED">侵</font>
+																							的細節，這本書出版後，安德魯在王室的地位變得岌岌可危。裘弗利家屬在她過世後聲明，「一位來自普通美國家庭的平凡女孩，憑藉她的真相和非凡勇氣擊垮一位英國王子」。
+																							<p>
+																								<p>艾普斯坦則因涉嫌仲介賣淫而被聯邦檢察官起訴，二○一九年在獄中候審時死亡，據稱也是自戕。
+																									<p>
+																										<p>王室人員十月卅日表示，查理三世已發出皇室認證予英國司法大臣，要求撤銷安德魯的公爵及王子頭銜，並從貴族名冊中移除他的殿下稱謂。白金漢宮指出，這些手續無需英國國會通過，查理三世不願占用國會審理國家大事的寶貴時間。
+																										</p>
+
+
+
+
+								</article>
+
+								<span class="story-source">【2025-11-01/聯合報/A10版/國際】</span>
+							</div>
+						</section>
+						<button id="addAuSuccess" data-html="#message-1" class="hide button-color popup-btn pop-html">狀態一</button>
+						<button id="addAuFail" class="hide button-color popup-btn pop-text" data-popup="<p>很抱歉！您加入的資料中含有不可授權的資料，無法加入文章線上授權中！</p>">狀態三</button>
+					</div>
+
+					<!-- // sidebar -->
+					<!-- // 會員資訊+會員服務+功能服務 -->
+					<!--#include virtual="inc/sidebar-service.html" -->
+
+
+					<aside class="service">
+						<!-- // 會員資訊 -->
+						<div class="info flex-space-between">
+
+						</div>
+
+						<!-- // 會員服務 -->
+						<div class="member">
+							<div class="title">會員服務</div>
+
+							<a href="https://udndata.com" data-html="#authority" class="fa-unlock popup-btn pop-html-big">我可使用的權限</a>
+
+
+							<span>
+		      <i class="fa fa-database" aria-hidden="true"></i>我可使用的資料庫有
+		      <ul> 
+            
+              <li style="cursor: pointer; " onclick="javascript:window.open('/udn/')">全文報紙資料庫</li>
+            
+	      	</ul>
+	      </span>
+
+						</div>
+
+
+					</aside>
+					<!-- // 我可使用的權限 -->
+					<div class="hide" id="authority">
+						<div class="authority-more">
+							<div class="table-head left">您目前可使用的權限如下</div>
+							<div class="table-border table-row list">
+								<ul class="table-head-two three">
+									<li class="center serve">付費商品</li>
+									<li class="center points">可閱讀則數</li>
+									<li class="center deadline">到期日</li>
+								</ul>
+								<ul class="authority-content">
+
+									<li>
+										<div class="serve">定址會員-不含圖庫.全頁</div>
+
+										<div class="points">無則數限制</div>
+										<div class="deadline">2026.01.07</div>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+
+
+
+					<aside id="sidebar" class="clearfix">
+						<hr class="space-5-15">
+						<div class="other-news">
+							<div class="title">其他新聞</div>
+							<div class="detail">本頁為<span class="mark">7/25</span>筆</div>
+							<ul>
+
+								<li><a
+										href="https://udndata.com/ndapp/Story?no=8&page=1&udndbid=udndata&SearchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D&sharepage=20&select=0&kind=2&article_date=2025-11-01&news_id=10611532&showUserSearch=&firstFatherCateID=">英王下重手
+										為守護王室</a></li>
+
+								<li><a
+										href="https://udndata.com/ndapp/Story?no=9&page=1&udndbid=udndata&SearchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D&sharepage=20&select=0&kind=2&article_date=2025-11-01&news_id=10610162&showUserSearch=&firstFatherCateID=">公務員職場霸凌
+										最重可免職</a></li>
+
+								<li><a
+										href="https://udndata.com/ndapp/Story?no=10&page=1&udndbid=udndata&SearchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D&sharepage=20&select=0&kind=2&article_date=2025-11-01&news_id=10610159&showUserSearch=&firstFatherCateID=">涉北車大廳性侵港婦
+										他遭求刑7年</a></li>
+
+								<li><a
+										href="https://udndata.com/ndapp/Story?no=11&page=1&udndbid=udndata&SearchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D&sharepage=20&select=0&kind=2&article_date=2025-11-01&news_id=10609185&showUserSearch=&firstFatherCateID=">共和黨猛打市長戰
+										劍指2026</a></li>
+
+								<li><a
+										href="https://udndata.com/ndapp/Story?no=12&page=1&udndbid=udndata&SearchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D&sharepage=20&select=0&kind=2&article_date=2025-11-01&news_id=10608865&showUserSearch=&firstFatherCateID=">帕勒托瑞操盤
+										五角大廈封口</a></li>
+
+								<li><a
+										href="https://udndata.com/ndapp/Story?no=13&page=1&udndbid=udndata&SearchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D&sharepage=20&select=0&kind=2&article_date=2025-11-01&news_id=10607113&showUserSearch=&firstFatherCateID=">台大醫涉性侵潛逃加
+										遣返收押</a></li>
+
+								<li><a
+										href="https://udndata.com/ndapp/Story?no=14&page=1&udndbid=udndata&SearchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D&sharepage=20&select=0&kind=2&article_date=2025-11-01&news_id=10604760&showUserSearch=&firstFatherCateID=">熱身金鐘頒獎人
+										潘迎紫秀二頭肌</a></li>
+
+								<li><a
+										href="https://udndata.com/ndapp/Story?no=15&page=1&udndbid=udndata&SearchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D&sharepage=20&select=0&kind=2&article_date=2025-11-01&news_id=10604846&showUserSearch=&firstFatherCateID=">北車性侵案
+										立委籲設軌道警察局</a></li>
+
+								<li><a
+										href="https://udndata.com/ndapp/Story?no=16&page=1&udndbid=udndata&SearchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D&sharepage=20&select=0&kind=2&article_date=2025-11-01&news_id=10604847&showUserSearch=&firstFatherCateID=">性侵影像外流傳播
+										石崇良：查明嚴懲</a></li>
+
+								<li><a
+										href="https://udndata.com/ndapp/Story?no=17&page=1&udndbid=udndata&SearchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D&sharepage=20&select=0&kind=2&article_date=2025-11-01&news_id=10604347&showUserSearch=&firstFatherCateID=">首度入圍視后
+										張鈞甯：可交出紅毯第一美 金鐘上台就好</a></li>
+
+								<li><a
+										href="https://udndata.com/ndapp/Story?no=18&page=1&udndbid=udndata&SearchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D&sharepage=20&select=0&kind=2&article_date=2025-11-01&news_id=10604354&showUserSearch=&firstFatherCateID=">修法過渡期
+										國教署：輕案不受理</a></li>
+
+								<li><a
+										href="https://udndata.com/ndapp/Story?no=19&page=1&udndbid=udndata&SearchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D&sharepage=20&select=0&kind=2&article_date=2025-11-01&news_id=10604326&showUserSearch=&firstFatherCateID=">北車大廳驚爆性侵
+										鐵警急補洞</a></li>
+
+								<li><a
+										href="https://udndata.com/ndapp/Story?no=20&page=1&udndbid=udndata&SearchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D&sharepage=20&select=0&kind=2&article_date=2025-11-01&news_id=10604328&showUserSearch=&firstFatherCateID=">婦團呼籲：應加強監控、救援機制</a>
+								</li>
+
+								<li><a
+										href="https://udndata.com/ndapp/Story?no=21&page=1&udndbid=udndata&SearchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D&sharepage=20&select=0&kind=2&article_date=2025-11-01&news_id=10604327&showUserSearch=&firstFatherCateID=">目擊遊客震驚
+										「10分鐘無人制止」</a></li>
+
+								<li><a
+										href="https://udndata.com/ndapp/Story?no=22&page=1&udndbid=udndata&SearchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D&sharepage=20&select=0&kind=2&article_date=2025-11-01&news_id=10604378&showUserSearch=&firstFatherCateID=">揭露台灣社會冷漠與治理盲點</a>
+								</li>
+
+								<li><a
+										href="https://udndata.com/ndapp/Story?no=23&page=1&udndbid=udndata&SearchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D&sharepage=20&select=0&kind=2&article_date=2025-11-01&news_id=10602491&showUserSearch=&firstFatherCateID=">遭霸凌者多轉學
+										雙北加強個別輔導</a></li>
+
+								<li><a
+										href="https://udndata.com/ndapp/Story?no=24&page=1&udndbid=udndata&SearchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D&sharepage=20&select=0&kind=2&article_date=2025-11-01&news_id=10600822&showUserSearch=&firstFatherCateID=">不執行死刑
+										竟成「可教化」證明？</a></li>
+
+								<li><a
+										href="https://udndata.com/ndapp/Story?no=25&page=1&udndbid=udndata&SearchString=qcqrSSuk6bTBPj0yMDI1MTAwOCuk6bTBPD0yMDI1MTEwNiuz%2BKdPPcFwpliz%2BA%3D%3D&sharepage=20&select=0&kind=2&article_date=2025-11-01&news_id=10600821&showUserSearch=&firstFatherCateID=">定讞14年未槍決
+										2死囚聲請再審</a></li>
+
+							</ul>
+						</div>
+
+					</aside>
+
+
+
+
+				</div>
+			</main>
+
+			<!-- // 版權聲明 -->
+			<!--#include virtual="inc/footer.html" -->
+			<footer>
+				<div class="footer-menu mob-none clearfix">
+					<!--
+    <a href="https://udndata.comhttp://co.udn.com/co/index">關於我們</a>
+    <a href="https://udndata.com/faq/authority.html">圖文轉載授權</a>
+    <a href="https://udndata.com/faq/marketing.html">行銷業務</a>
+    <a href="https://udndata.comhttps://udn.com/page/topic/495">著作權聲明</a>
+    <a href="https://udndata.comhttp://www.udngroup.com/information/privacy">隱私權聲明</a>
+    <a href="https://udndata.comhttps://udn.com/page/topic/185">服務條款</a>
+    <a href="https://udndata.com/aboutus.html">udndata介紹</a>
+    <a href="https://udndata.com/faq/service.html">客服</a>
+	-->
+					<script src="/js/footer_data_u.js" charset="utf-8"></script>
+					<script>
+						ft_t5()
+					</script>
+
+				</div>
+				<div class="copyright">聯合線上公司 著作權所有 &copy; udn.com All Rights Reserved.</div>
+				<!-- google analytics -->
+
+				<script>
+					(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	ga('create', 'UA-19660006-1', 'auto');
+	
+	ga('create', 'UA-20357535-1', 'auto', {'name': 'udndata'});
+	
+	ga('send', 'pageview');
+	
+	ga('udndata.send', 'pageview');
+	
+				</script>
+
+				<!-- google analytics -->
+				<!-- Begin comScore Tag -->
+				<script>
+					var _comscore = _comscore || [];
+		_comscore.push({ c1: "2", c2: "7390954" });
+		(function() {
+		  var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+		  s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+		  el.parentNode.insertBefore(s, el);})();
+				</script>
+				<noscript>
+					<img src="http://b.scorecardresearch.com/p?c1=2&c2=7390954&cv=2.0&cj=1" />
+	  </noscript>
+					<!-- End comScore Tag -->
+					<script>
+						(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		  })(window,document,'script','dataLayer','GTM-K2BMZZT');
+					</script>
+					<!-- End Google Tag Manager -->
+					<!-- Google Tag Manager (noscript) -->
+					<noscript>
+						<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2BMZZT" height="0" width="0"
+							style="display:none;visibility:hidden"></iframe>
+					</noscript>
+					<!-- End Google Tag Manager (noscript) -->
+			</footer>
+
+			<!-- // gotop -->
+			<a id="gotop" href="https://udndata.com#top">Top</a>
+
+			<!-- // 公版 -->
+			<div class="popup close">
+				<div class="close-btn btn-right"><i class="i-close"></i></div>
+				<div class="popup-content"></div>
+				<div class="btn-group-setup center"></div>
+			</div>
+
+			<!-- // 訊息狀態 demo -->
+			<div class="hide" id="message-1">
+				<div class="message-1">
+					<p class="center">您勾選的資料已成功加入「文章線上授權」！！</p>
+					<div class="btn-group center">
+						<button onclick="javascript: window.location.href='/ndapp/authority/AuIndex'" class="button-close">查看「文章線上授權」</button><button class="button-close">繼續查詢</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- jquery 主程式 -->
+		<script src="/images/newdata/js_2017/jquery-1.11.1.min.js"></script>
+
+		<!-- masterslider 主程式 + 設定檔 -->
+		<script src="/images/newdata/js_2017/masterslider.js"></script>
+		<script src="/images/newdata/js_2017/masterslider-setup.js"></script>
+
+
+		<!-- jquery 其他程式    -->
+		<script src="/images/newdata/js_2017/openBox.js"></script>
+		<script src="/images/newdata/js_2017/function.js"></script>
+
+
+		<script>
+			$(function() {
+/*
+		$('.add').on('mouseenter mouseleave', function(e) {
+        // console.log(e.target.classList[1]);
+        var event = e.type;
+        // var test = e.target.classList[1]
+
+        if (e.target.classList.contains('select-clipping')) {
+          return false;
+        }
+        // console.log('continue');
+        $('.clipping-pop').hide();
+
+        if (event === 'mouseenter') {
+          $(this).children('.clipping-pop').show();
+          $('.overlay').addClass('opacity');
+          $('.overlay').removeClass('close');
+        } else {
+          $(this).children('.clipping-pop').hide();
+          $('.overlay').removeClass('opacity');
+          $('.overlay').addClass('close');
+        }
+
+      });
+
+      $('.overlay').on('mouseover', function() {
+        // $('.overlay').addClass('close');
+        $('.clipping-pop').hide();
+      });
+*/
+     $('.add').on('click', function (e) {
+        var chkThis = e.target === this;
+        var chkSpan = e.target.nodeName.toLowerCase() === 'span';
+		console.log( e.target.nodeName);
+        var chkFa = e.target.classList.contains('fa-plus-square');
+
+        if (chkThis || chkSpan || chkFa) {
+          $(this).toggleClass('active');
+        }
+      });
+
+      $('.add-clipping, .select-clipping').on('focus', function() {
+        $(this).prev(":radio").prop('checked', true);
+      });
+	
+      
+      
+
+      
+      
+      
+    });
+   		
+	//文庫內文頁觀看全頁報紙影像
+	function checkfull( id, check ) {
+		if(check=="yes"){
+			//var ans = window.confirm( "觀看全頁報紙影像需扣儲值點數一點，您要觀看嗎?\n全頁報紙影像僅供觀看，不提供下載功能。\n影像檔輸出速度較慢，請稍待。" );
+			var ans = window.confirm( "觀看全頁報紙影像需扣可閱讀則數一則，您要觀看嗎?\n全頁報紙影像僅供觀看，不提供下載功能。\n影像檔輸出速度較慢，請稍待。" );
+			if( ans ) {
+				window.open( '/ndapp/ShowFullPaper?id=' + id ,'check','scrollbars,resizable=yes,width='+screen.width+','+'height='+screen.height);
+			}
+			return false;
+		}else if(check=="no"){
+			window.open( '/ndapp/ShowFullPaper?id=' + id ,'check','scrollbars,resizable=yes,width='+screen.width+','+'height='+screen.height);	
+		}
+	}
+	
+	
+	
+
+    $('.contacts').on('click', function () {
+      $('.popup-content').before("<div class='print-header clearfix'><div class='logo-data'><img src='/images/newdata/images_2017/logo-data.svg' alt='聯合資料庫' title='聯合資料庫'></div><button class='friendlyPrint'><i class='fa fa-print' aria-hidden='true'></i>友善列印</button></div>");
+      $('.pic').hide();
+      $('.print-pic').show();
+    });
+
+    $('body').on('click', '.friendlyPrint', function (e) {
+    	$.ajax({  
+			url: '/ndapp/newdata/recordBehavior.jsp',	
+			data: { 
+				service_id : '1',
+				category : 'Print',					
+			},
+			success: function(msg){
+				console.log(msg)
+			}
+		});
+      $('.print-header').remove();
+      $('.popup, .overlay').addClass('close');
+      $('.popup').removeAttr('style');
+      $('.popup-content, .btn-group-setup').empty();
+      window.print();
+      $('.pic').show();
+      $('.print-pic').hide();
+      $('.friendlyPrint').remove();
+    });
+
+    var printPicW = $('.print-pic-img img').width();
+    var printPicH = $('.print-pic-img img').height();
+    var imgScale = printPicW / printPicH;
+    var originalScale = $('.print-pic-img').width() / $('.print-pic-img img').height();
+
+    if (printPicW > printPicH && imgScale < originalScale) {
+      $('.print-pic-img img').css({ 'width': '100%', 'height': 'auto' });
+    } else {
+      $('.print-pic-img img').css({ 'width': 'auto', 'height': '100%' });
+    }	
+
+	$('.print-pic img')[0].onerror = function(){
+		$('.pic').remove();
+		$('.print-pic').remove();
+	};
+		</script>
+
+
+</body>
+
+</html>
