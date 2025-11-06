@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@ai-sdk/google": "^2.0.28",
+    "ai": "^5.0.88",
+    "cheerio": "^1.1.2",
+    "dotenv": "^17.2.3",
+    "es-cookie": "^1.5.0",
+    "iconv-lite": "^0.7.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "@types/bun": "latest"
+  },
+  "name": "hw3",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
